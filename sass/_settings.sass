@@ -1,0 +1,41 @@
+*,*:before, *:after
+    box-sizing: border-box
+    margin: 0
+h1,h2,h3
+    margin: 0
+html 
+    font-family: 'Poppins', sans-serif
+    font-size: 1rem
+    color: $white
+    background: $black
+.container
+    &--normal
+        max-width: 75rem
+        width: 100%
+        margin: 0 auto
+    &--wide
+        max-width: 83.75rem
+        width: 100%
+        margin: 0 auto
+a
+    color: $white
+    text-decoration: none
+.button
+    border: none
+    color: $black
+    cursor: pointer
+    border-radius: 0.875rem
+    &--primary
+        background: $white
+    &--black
+        position: relative
+        padding: 0.625rem 0.625rem 0.8125rem 2.625rem
+        &::before
+            content: ''
+            position: absolute
+            top: 5px
+            left: 5px
+            width: 32px
+            height: 32px
+            background: url('../img/circle.svg')
+        
