@@ -120,7 +120,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
-    // burger
+    // header-borgir
     .menu-btn
         position: relative
         display: flex
@@ -163,20 +163,56 @@
     // _________________________________
 
     .header
+        position: fixed
+        z-index: 4
+        width: 100%
         &-content
             flex-direction: row
             align-items: center
         &__logo
+            z-index: 4
             margin-bottom: 0
         &-nav
-            display: none
+            position: absolute
+            top: -600%
+            left: 0
+            width: 100%
+            height: 50%
+            background: $dark
+            margin-left: 0
+            z-index: 2
+            padding: 180px 0 0 0
+            transition: all .5s ease-in-out
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            &.open
+                top: 0
+                padding: 12.5rem 0
+                max-width: 100%
+                height: 100vh
+            &__link
+                width: 100%
+                border-bottom: 1px solid $white
+                margin-right: 0
+                margin-bottom: 2rem
+                padding-bottom: 2rem
+                text-align: center
+                font-size: 1.5rem
+                &:first-of-type
+                    margin-right: 0
+                    font-size: 1.5rem
+                &:last-of-type
+                    margin-right: 0
+                    border: none
     .container
         &--normal
             max-width: 25rem
         &--wide
             max-width: 26rem
     .hero
-        padding-top: 4rem
+        padding-top: 10rem
         &-heading
             &__title
                 font-size: 2.4rem
@@ -216,15 +252,16 @@
                 max-width: 23rem
     .help
         padding-top: 3.5rem
+        padding-bottom: 0
         &__title
-            font-size: 1.5rem
+            font-size: 1rem
         &__subtitle
             font-size: 1rem
     .footer
         padding-top: 1.25rem
         padding-bottom: 2.25rem
         &-top
-            align-items: center
+            display: none
         &-nav
             display: none
         &-bottom
@@ -278,6 +315,9 @@
         &-text
             &__title
                 text-align: center
+        &-form
+            &__input
+                max-width: 9.5rem
         &__copyright
             font-size: 0.575rem
         &__license
